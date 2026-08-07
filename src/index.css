@@ -10364,7 +10364,7 @@ a:focus-visible {
 .about-v6-head h2 {
   margin: 0;
   color: #f0f5f7;
-  font-size: clamp(4rem, 7.55vw, 8.15rem);
+  font-size: clamp(3.25rem, 6.2vw, 6.7rem);
   font-weight: 560;
   letter-spacing: -0.075em;
   line-height: 0.84;
@@ -10869,7 +10869,7 @@ a:focus-visible {
   }
 
   .about-v6-head h2 {
-    font-size: clamp(3.85rem, 9.5vw, 6.9rem);
+    font-size: clamp(3.05rem, 7.8vw, 5.5rem);
   }
 
   .about-v6-founder-mark {
@@ -10942,23 +10942,24 @@ a:focus-visible {
   }
 
   .about-v6-head h2 {
-    font-size: clamp(2.48rem, 12.45vw, 4rem);
-    line-height: 0.87;
+    max-width: 12ch;
+    font-size: clamp(2rem, 9.7vw, 3.1rem);
+    line-height: 0.91;
   }
 
   .about-v6-founder-mark {
-    grid-template-columns: 82px 1fr;
-    gap: 5px 13px;
-    padding-top: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 9px;
+    padding-top: 14px;
   }
 
   .about-v6-founder-mark > span {
-    grid-row: 1 / span 3;
-    font-size: 0.4rem;
+    display: none;
   }
 
   .about-v6-founder-mark strong {
-    grid-column: 2;
+    flex-basis: 100%;
     font-size: 1.05rem;
   }
 
@@ -10966,13 +10967,19 @@ a:focus-visible {
     font-size: 0.47rem;
   }
 
+  .about-v6-founder-mark small + small::before {
+    margin-right: 9px;
+    color: #334650;
+    content: "/";
+  }
+
   .about-v6-story {
-    gap: 42px;
-    margin-top: 54px;
+    gap: 34px;
+    margin-top: 44px;
   }
 
   .about-v6-visual {
-    min-height: 430px;
+    min-height: 340px;
   }
 
   .about-v6-visual-meta {
@@ -10982,23 +10989,21 @@ a:focus-visible {
     font-size: 0.32rem;
   }
 
+  .about-v6-visual-meta span:last-child,
+  .about-v6-frame-inner,
+  .about-v6-scan-line,
+  .about-v6-discipline,
+  .about-v6-name-rail {
+    display: none;
+  }
+
   .about-v6-identity-plate {
-    width: 85%;
+    width: min(74%, 250px);
     transform: none;
   }
 
   .about-v6-monogram {
-    font-size: clamp(6.1rem, 31vw, 8.4rem);
-  }
-
-  .about-v6-discipline {
-    bottom: 22%;
-    font-size: 0.31rem;
-  }
-
-  .about-v6-name-rail {
-    right: -66px;
-    font-size: 0.32rem;
+    font-size: clamp(5rem, 25vw, 6.7rem);
   }
 
   .about-v6-visual-status {
@@ -11037,9 +11042,13 @@ a:focus-visible {
   }
 
   .about-v6-principle > div > span {
-    gap: 5px;
-    padding-left: 7px;
+    border-left: 0;
+    padding-left: 0;
     font-size: 0.62rem;
+  }
+
+  .about-v6-principle > div > span small {
+    display: none;
   }
 
   .about-v6-actions {
@@ -11054,39 +11063,43 @@ a:focus-visible {
   }
 
   .about-v6-ledger {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 58px;
   }
 
   .about-v6-ledger-head {
+    grid-column: 1 / -1;
     padding: 14px 1px;
     font-size: 0.37rem;
   }
 
   .about-v6-ledger-row {
     min-height: 0;
-    grid-template-columns: 36px minmax(0, 1fr);
-    gap: 7px 11px;
-    padding: 21px 1px;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: 7px;
+    border-right: 1px solid rgba(255, 255, 255, 0.075);
+    padding: 18px 12px;
   }
 
-  .about-v6-ledger-row > span {
-    grid-row: 1 / span 3;
-    align-self: start;
-    padding-top: 2px;
+  .about-v6-ledger-row:nth-of-type(even) {
+    border-right: 0;
   }
 
   .about-v6-ledger-row > small,
-  .about-v6-ledger-row strong,
+  .about-v6-ledger-row strong {
+    grid-column: 1;
+  }
+
+  .about-v6-ledger-row > span,
   .about-v6-ledger-row p {
-    grid-column: 2;
+    display: none;
   }
 
   .about-v6-ledger-row strong {
-    font-size: 1.08rem;
-  }
-
-  .about-v6-ledger-row p {
-    font-size: 0.62rem;
+    font-size: clamp(0.9rem, 4.5vw, 1.08rem);
+    line-height: 1.25;
   }
 
   .about-v6-focus {
@@ -11096,12 +11109,21 @@ a:focus-visible {
   }
 
   .about-v6-focus-list {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 6px;
   }
 
   .about-v6-focus-list > span {
-    min-height: 48px;
+    display: inline-flex;
+    min-height: 36px;
+    width: auto;
+    padding: 8px 11px;
+    font-size: 0.56rem;
+  }
+
+  .about-v6-focus-list small {
+    display: none;
   }
 }
 
