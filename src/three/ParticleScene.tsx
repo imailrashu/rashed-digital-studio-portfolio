@@ -13,7 +13,31 @@ import {
   useDeviceQuality,
 } from "../hooks/useDeviceQuality";
 import { useReducedMotion } from "../hooks/useReducedMotion";
+import { useTheme, type Theme } from "../components/theme/themeContext";
 import ParticleFallback from "./ParticleFallback";
+
+const scenePalettes = {
+  dark: {
+    shell: "#7cecff",
+    nodes: "#d7faff",
+    connections: "#56cfff",
+    depth: "#527cff",
+    core: "#3e87ff",
+    ringPrimary: "#7ceeff",
+    ringSecondary: "#4c72ff",
+    ringDepth: "#8a6dff",
+  },
+  light: {
+    shell: "#18749f",
+    nodes: "#163c55",
+    connections: "#297fd0",
+    depth: "#6056c7",
+    core: "#195fbd",
+    ringPrimary: "#1980a9",
+    ringSecondary: "#315dcc",
+    ringDepth: "#7058c6",
+  },
+} as const;
 
 function seededRandom(seed: number) {
   let value = seed % 2147483647;
@@ -52,10 +76,12 @@ function NetworkObject({
   quality,
   reducedMotion,
   scrollProgress,
+  theme,
 }: {
   quality: DeviceQuality;
   reducedMotion: boolean;
   scrollProgress: RefObject<number>;
+  theme: Theme;
 }) {
   const rootRef = useRef<THREE.Group>(null);
   const shellRef = useRef<THREE.Points>(null);
@@ -63,6 +89,8 @@ function NetworkObject({
   const ringsRef = useRef<THREE.Group>(null);
   const shellMaterialRef = useRef<THREE.PointsMaterial>(null);
   const lineMaterialRef = useRef<THREE.LineBasicMaterial>(null);
+  const palette = scenePalettes[theme];
+  const lightTheme = theme === "light";
 
   const shellPositions = useMemo(() => {
     const count = particleCount(quality);
@@ -184,16 +212,20 @@ function NetworkObject({
 
     if (shellMaterialRef.current) {
       shellMaterialRef.current.opacity = THREE.MathUtils.lerp(
-        0.86,
-        0.56,
+        lightTheme ? 0.72 : 0.86,
+        lightTheme ? 0.48 : 0.56,
         progress,
       );
     }
 
     if (lineMaterialRef.current) {
       lineMaterialRef.current.opacity = THREE.MathUtils.lerp(
-        quality === "low" ? 0.12 : 0.08,
-        quality === "low" ? 0.3 : 0.58,
+        lightTheme
+          ? quality === "low" ? 0.18 : 0.14
+          : quality === "low" ? 0.12 : 0.08,
+        lightTheme
+          ? quality === "low" ? 0.38 : 0.5
+          : quality === "low" ? 0.3 : 0.58,
         progress,
       );
     }
@@ -225,13 +257,13 @@ function NetworkObject({
         </bufferGeometry>
         <pointsMaterial
           ref={shellMaterialRef}
-          color="#7cecff"
+          color={palette.shell}
           size={quality === "low" ? 0.026 : 0.018}
           sizeAttenuation
           transparent
-          opacity={0.86}
+          opacity={lightTheme ? 0.72 : 0.86}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          blending={lightTheme ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </points>
 
@@ -243,13 +275,13 @@ function NetworkObject({
           />
         </bufferGeometry>
         <pointsMaterial
-          color="#d7faff"
+          color={palette.nodes}
           size={quality === "low" ? 0.05 : 0.04}
           sizeAttenuation
           transparent
-          opacity={0.92}
+          opacity={lightTheme ? 0.82 : 0.92}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          blending={lightTheme ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </points>
 
@@ -262,11 +294,11 @@ function NetworkObject({
         </bufferGeometry>
         <lineBasicMaterial
           ref={lineMaterialRef}
-          color="#56cfff"
+          color={palette.connections}
           transparent
-          opacity={0.08}
+          opacity={lightTheme ? 0.14 : 0.08}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          blending={lightTheme ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </lineSegments>
 
@@ -278,11 +310,11 @@ function NetworkObject({
           />
         </bufferGeometry>
         <pointsMaterial
-          color="#527cff"
+          color={palette.depth}
           size={quality === "low" ? 0.02 : 0.014}
           sizeAttenuation
           transparent
-          opacity={0.24}
+          opacity={lightTheme ? 0.28 : 0.24}
           depthWrite={false}
         />
       </points>
@@ -290,10 +322,10 @@ function NetworkObject({
       <mesh ref={innerRef} scale={0.76}>
         <icosahedronGeometry args={[1, quality === "low" ? 1 : 2]} />
         <meshBasicMaterial
-          color="#3e87ff"
+          color={palette.core}
           wireframe
           transparent
-          opacity={0.13}
+          opacity={lightTheme ? 0.2 : 0.13}
           depthWrite={false}
         />
       </mesh>
@@ -301,18 +333,18 @@ function NetworkObject({
       <group ref={ringsRef}>
         <mesh rotation={[1.02, 0.2, 0.35]} scale={1.58}>
           <torusGeometry args={[1, 0.004, 6, torusSegments]} />
-          <meshBasicMaterial color="#7ceeff" transparent opacity={0.33} />
+          <meshBasicMaterial color={palette.ringPrimary} transparent opacity={lightTheme ? 0.42 : 0.33} />
         </mesh>
 
         <mesh rotation={[0.28, 0.98, 1.06]} scale={1.78}>
           <torusGeometry args={[1, 0.003, 6, torusSegments]} />
-          <meshBasicMaterial color="#4c72ff" transparent opacity={0.23} />
+          <meshBasicMaterial color={palette.ringSecondary} transparent opacity={lightTheme ? 0.3 : 0.23} />
         </mesh>
 
         {quality !== "low" && (
           <mesh rotation={[0.72, -0.55, 0.16]} scale={1.98}>
             <torusGeometry args={[1, 0.0025, 6, torusSegments]} />
-            <meshBasicMaterial color="#8a6dff" transparent opacity={0.13} />
+            <meshBasicMaterial color={palette.ringDepth} transparent opacity={lightTheme ? 0.18 : 0.13} />
           </mesh>
         )}
       </group>
@@ -342,6 +374,7 @@ export default function ParticleScene({
   const [webGLSupported] = useState(() => supportsWebGL());
   const quality = useDeviceQuality();
   const reducedMotion = useReducedMotion();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const container = containerRef.current;
@@ -370,10 +403,10 @@ export default function ParticleScene({
       <Canvas
         dpr={
           quality === "low"
-            ? [1, 1]
+            ? [1, 1.5]
             : quality === "medium"
-              ? [1, 1.3]
-              : [1, 1.65]
+              ? [1, 1.6]
+              : [1, 2]
         }
         frameloop={isVisible && !reducedMotion ? "always" : "demand"}
         camera={{ position: [0, 0, 5.3], fov: 40 }}
@@ -387,6 +420,7 @@ export default function ParticleScene({
           quality={quality}
           reducedMotion={reducedMotion}
           scrollProgress={scrollProgress}
+          theme={theme}
         />
       </Canvas>
     </div>

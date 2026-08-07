@@ -35,6 +35,7 @@ export default function ProjectMockup({ project, index }: ProjectMockupProps) {
             height="900"
             loading="lazy"
             decoding="async"
+            draggable="false"
           />
         </div>
       </div>
@@ -51,6 +52,7 @@ export default function ProjectMockup({ project, index }: ProjectMockupProps) {
             height="844"
             loading="lazy"
             decoding="async"
+            draggable="false"
           />
         </div>
         <span className="work-phone-number" aria-hidden="true">{projectNumber}</span>
