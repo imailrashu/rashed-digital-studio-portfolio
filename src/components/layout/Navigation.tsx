@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import { siteConfig } from "../../data/siteConfig";
+import ThemeToggle from "../theme/ThemeToggle";
 
 const focusableSelector =
   'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -109,6 +110,7 @@ export default function Navigation() {
         </nav>
 
         <div className="desktop-actions">
+          <ThemeToggle />
           <a
             className="nav-project-button"
             href={siteConfig.calendly}
@@ -120,22 +122,25 @@ export default function Navigation() {
           </a>
         </div>
 
-        <button
-          className="mobile-menu-button"
-          ref={menuButtonRef}
-          type="button"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setMenuOpen((value) => !value)}
-        >
-          <span>{menuOpen ? "Close" : "Menu"}</span>
-          {menuOpen ? (
-            <X size={19} aria-hidden="true" />
-          ) : (
-            <Menu size={19} aria-hidden="true" />
-          )}
-        </button>
+        <div className="mobile-actions">
+          <ThemeToggle compact />
+          <button
+            className="mobile-menu-button"
+            ref={menuButtonRef}
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMenuOpen((value) => !value)}
+          >
+            <span>{menuOpen ? "Close" : "Menu"}</span>
+            {menuOpen ? (
+              <X size={19} aria-hidden="true" />
+            ) : (
+              <Menu size={19} aria-hidden="true" />
+            )}
+          </button>
+        </div>
 
         {menuOpen && (
           <div

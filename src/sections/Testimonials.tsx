@@ -87,14 +87,28 @@ function ProofSignalVisual({ type }: { type: ProofVisualType }) {
           <i />
           <i />
         </span>
-        <img
-          src="/projects/atoz-interior/desktop.png"
-          alt=""
-          width="1440"
-          height="900"
-          loading="lazy"
-          decoding="async"
-        />
+        <div className="proof-v4-screenshot-stage">
+          <img
+            src="/projects/atoz-interior/desktop.png"
+            alt=""
+            width="1440"
+            height="900"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
+          <span className="proof-v4-screenshot-phone">
+            <img
+              src="/projects/atoz-interior/mobile.png"
+              alt=""
+              width="390"
+              height="844"
+              loading="lazy"
+              decoding="async"
+              draggable="false"
+            />
+          </span>
+        </div>
       </div>
     );
   }

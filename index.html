@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#05080c" />
+    <script>
+      (() => {
+        const key = "rds-theme";
+        let saved = null;
+        try {
+          saved = localStorage.getItem(key);
+        } catch {}
+        const theme = saved === "dark" || saved === "light"
+          ? saved
+          : matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute(
+          "content",
+          theme === "light" ? "#f1eee7" : "#05080c",
+        );
+      })();
+    </script>
     <meta
       name="description"
       content="Rashed Digital Studio creates responsive business websites, landing pages and interactive web experiences for businesses in Kolkata, India and worldwide."

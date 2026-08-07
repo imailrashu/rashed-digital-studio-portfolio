@@ -144,9 +144,9 @@ export default function SelectedWork() {
               {
                 y: 125,
                 x: 34 * direction,
-                scale: 0.88,
-                rotateX: 7,
-                rotateZ: 4.8 * direction,
+                scale: 0.95,
+                rotateX: 3.5,
+                rotateZ: 2.2 * direction,
                 opacity: 0.16,
               },
               {

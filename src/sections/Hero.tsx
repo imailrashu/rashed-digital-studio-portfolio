@@ -46,25 +46,8 @@ export default function Hero() {
       return;
     }
 
-    const idleWindow = window as Window & {
-      cancelIdleCallback?: (handle: number) => void;
-      requestIdleCallback?: (
-        callback: IdleRequestCallback,
-        options?: IdleRequestOptions,
-      ) => number;
-    };
-
-    if (idleWindow.requestIdleCallback) {
-      const handle = idleWindow.requestIdleCallback(
-        () => setSceneReady(true),
-        { timeout: 900 },
-      );
-
-      return () => idleWindow.cancelIdleCallback?.(handle);
-    }
-
-    const timeout = window.setTimeout(() => setSceneReady(true), 180);
-    return () => window.clearTimeout(timeout);
+    const frame = window.requestAnimationFrame(() => setSceneReady(true));
+    return () => window.cancelAnimationFrame(frame);
   }, [reducedMotion]);
 
   useLayoutEffect(() => {
@@ -94,7 +77,10 @@ export default function Hero() {
             scrollTrigger: {
               trigger: section,
               start: "top top",
-              end: "+=1150",
+              end: () =>
+                `+=${Math.round(
+                  Math.min(760, Math.max(520, window.innerHeight * 0.72)),
+                )}`,
               scrub: 0.8,
               pin: stage,
               pinSpacing: true,
