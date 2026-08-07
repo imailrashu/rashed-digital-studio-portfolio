@@ -223,25 +223,40 @@ export default function About() {
           className="about-v6-visual"
           onPointerMove={updatePointerDepth}
           onPointerLeave={resetPointerDepth}
-          aria-label="Graphic founder identity for Md Rashed"
-          role="img"
         >
           <div className="about-v6-visual-meta" aria-hidden="true">
             <span>RDS / IDENTITY FILE</span>
             <span>22.57° N / 88.36° E</span>
           </div>
 
-          <div className="about-v6-identity-plate" aria-hidden="true">
-            <span className="about-v6-registration about-v6-registration-a" />
-            <span className="about-v6-registration about-v6-registration-b" />
-            <span className="about-v6-registration about-v6-registration-c" />
-            <span className="about-v6-registration about-v6-registration-d" />
-            <span className="about-v6-frame about-v6-frame-outer" />
-            <span className="about-v6-frame about-v6-frame-inner" />
-            <span className="about-v6-scan-line" />
-            <strong className="about-v6-monogram">MR</strong>
-            <span className="about-v6-discipline">DESIGN / FRONT-END</span>
-            <span className="about-v6-name-rail">RASHED DIGITAL STUDIO</span>
+          <div className="about-v6-identity-plate">
+            <span className="about-v6-registration about-v6-registration-a" aria-hidden="true" />
+            <span className="about-v6-registration about-v6-registration-b" aria-hidden="true" />
+            <span className="about-v6-registration about-v6-registration-c" aria-hidden="true" />
+            <span className="about-v6-registration about-v6-registration-d" aria-hidden="true" />
+            <span className="about-v6-frame about-v6-frame-outer" aria-hidden="true" />
+            <span className="about-v6-frame about-v6-frame-inner" aria-hidden="true" />
+            <span className="about-v6-scan-line" aria-hidden="true" />
+
+            <figure className="about-v6-portrait">
+              <img
+                src="/images/md-rashed-profile.webp"
+                alt="Portrait of Md Rashed, founder of Rashed Digital Studio"
+                width="1024"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+                draggable="false"
+              />
+              <figcaption className="about-v6-portrait-id">
+                <span>Founder portrait</span>
+                <strong>MR / 001</strong>
+              </figcaption>
+            </figure>
+
+            <strong className="about-v6-monogram" aria-hidden="true">MR</strong>
+            <span className="about-v6-discipline" aria-hidden="true">DESIGN / FRONT-END</span>
+            <span className="about-v6-name-rail" aria-hidden="true">RASHED DIGITAL STUDIO</span>
           </div>
 
           <div className="about-v6-visual-status" aria-hidden="true">
