@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="FORGE training club — a premium fitness website concept by Rashed Digital Studio." />
+    <title>FORGE — Premium Fitness Concept</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>@media(max-width:600px){.hero-copy{min-width:0;max-width:100%}.hero h1{max-width:100%;font-size:clamp(52px,15vw,68px);overflow-wrap:anywhere}.hero h1 mark{display:inline-block;font-size:.72em;white-space:nowrap}.section-heading{grid-template-columns:minmax(0,1fr);min-width:0}.section-heading>*{min-width:0}.section-heading p{overflow-wrap:anywhere}.coaches .section-heading h2 span{font-size:.74em}.schedule h2,.location h2{font-size:13.5vw;overflow-wrap:anywhere}.ticker-track{width:100%;justify-content:space-around;gap:8px;animation:none}.ticker-track>:nth-child(n+6){display:none}.ticker span{font-size:18px}.program-card,.plan{min-width:0;overflow:hidden}.program-card h3{font-size:39px}.plan h3{font-size:44px}.program-top b{overflow-wrap:anywhere}}</style>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="concept-bar"><span>Portfolio concept — not a real gym</span><span>Functional training · Strength · Conditioning</span></div>
+    <header class="site-header">
+      <a class="logo" href="#home">F<span>O</span>RGE<small>Training club</small></a>
+      <nav class="desktop-nav" aria-label="Primary navigation"><a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#coaches">Coaches</a><a href="#membership">Membership</a></nav>
+      <a class="trial-link" href="#trial">Claim a free trial <b>↗</b></a>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="mobile-nav" aria-label="Mobile navigation"><a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#coaches">Coaches</a><a href="#membership">Membership</a><a href="#trial">Free trial</a></nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-media"><img src="./assets/gym-hero.jpg" alt="Industrial strength training gym" /><div class="hero-shade"></div></div>
+        <div class="hero-grid"><div class="hero-copy reveal"><p class="kicker">Train for the life outside the gym</p><h1>Build strength<br />that shows up<br /><mark>everywhere.</mark></h1><p class="intro">A high-energy training concept built around clear coaching, progressive programs and a room that expects your full attention.</p><div class="hero-actions"><a class="button button-yellow" href="#trial">Start with a free session</a><a class="button button-ghost" href="#programs">Explore training</a></div></div><aside class="session-card reveal"><p>Today at FORGE</p><h2>Full-body<br />strength</h2><div><span>Warm-up</span><b>Mobility + movement</b></div><div><span>Main work</span><b>Squat · Press · Pull</b></div><div><span>Finish</span><b>Conditioning circuit</b></div><small>Demonstration session format</small></aside></div>
+        <div class="hero-index"><span>01</span><i></i><span>Train with intent</span></div>
+      </section>
+
+      <section class="ticker" aria-label="Workout qualities"><div class="ticker-track"><span>Strength</span><b>×</b><span>Power</span><b>×</b><span>Conditioning</span><b>×</b><span>Mobility</span><b>×</b><span>Control</span><b>×</b><span>Strength</span><b>×</b><span>Power</span><b>×</b><span>Conditioning</span><b>×</b></div></section>
+
+      <section class="section programs" id="programs">
+        <header class="section-heading reveal"><p class="label">01 / Programs</p><h2>Choose your<br /><span>training ground.</span></h2><p>Each program card is a demonstration of how clear pathways can make a gym website easier to understand and act on.</p></header>
+        <div class="program-grid"><article class="program-card reveal"><div class="program-top"><span>01</span><b>Foundational power</b></div><h3>Strength</h3><p>Progressive barbell and resistance work with technique, tempo and repeatable structure.</p><a href="#trial">View program ↗</a></article><article class="program-card reveal"><div class="program-top"><span>02</span><b>Engine + capacity</b></div><h3>Conditioning</h3><p>Intervals, aerobic work and carefully scaled sessions that reward consistency.</p><a href="#trial">View program ↗</a></article><article class="program-card program-image reveal"><img src="./assets/weight-training.jpg" alt="Athlete training with weights" /><div><span>03</span><h3>Cross<br />Training</h3><a href="#trial">View program ↗</a></div></article><article class="program-card reveal"><div class="program-top"><span>04</span><b>One-to-one focus</b></div><h3>Personal<br />Coaching</h3><p>Individual programming, movement feedback and coaching built around your context.</p><a href="#trial">View program ↗</a></article></div>
+      </section>
+
+      <section class="schedule" id="schedule">
+        <header class="schedule-heading reveal"><p class="label">02 / Weekly schedule</p><h2>Put training<br />on the calendar.</h2></header>
+        <div class="day-tabs" role="tablist" aria-label="Choose schedule day"><button class="active" data-day="mon" role="tab" aria-selected="true">Mon</button><button data-day="tue" role="tab">Tue</button><button data-day="wed" role="tab">Wed</button><button data-day="thu" role="tab">Thu</button><button data-day="fri" role="tab">Fri</button><button data-day="sat" role="tab">Sat</button></div>
+        <div class="schedule-list reveal" data-schedule><article><time>06:30</time><div><h3>FORGE Strength</h3><p>Technique + progressive strength</p></div><span>60 min</span><a href="#trial">Book ↗</a></article><article><time>08:00</time><div><h3>Engine Room</h3><p>Conditioning + aerobic capacity</p></div><span>45 min</span><a href="#trial">Book ↗</a></article><article><time>18:00</time><div><h3>Cross Training</h3><p>Strength + mixed-modal training</p></div><span>60 min</span><a href="#trial">Book ↗</a></article><article><time>19:30</time><div><h3>Move Better</h3><p>Mobility + controlled strength</p></div><span>45 min</span><a href="#trial">Book ↗</a></article></div>
+        <p class="schedule-note">Concept schedule — a real implementation would use verified classes and booking availability.</p>
+      </section>
+
+      <section class="philosophy">
+        <div class="philosophy-media reveal"><img src="./assets/athlete.jpg" alt="Focused athlete in an industrial gym" /></div>
+        <div class="philosophy-copy reveal"><p class="label">03 / Training philosophy</p><h2>Work hard.<br />Move well.<br /><span>Stay useful.</span></h2><p>Training should build capacity, not just create exhaustion. The concept balances intensity with quality movement and visible coaching structure.</p><ul><li><b>01</b> Technique before load</li><li><b>02</b> Progress before novelty</li><li><b>03</b> Coaching before ego</li></ul></div>
+      </section>
+
+      <section class="section coaches" id="coaches">
+        <header class="section-heading reveal"><p class="label">04 / Coaches</p><h2>Coaching you<br /><span>can understand.</span></h2><p>Role-based concept profiles show how coaching specialties could be presented without inventing real staff identities.</p></header>
+        <div class="coach-grid"><article class="coach-card reveal"><div class="coach-portrait coach-one"><span>HC</span><b>Head coach concept</b></div><h3>Strength & movement</h3><p>Barbell fundamentals · Progression · Technique</p></article><article class="coach-card reveal"><div class="coach-portrait coach-two"><span>CC</span><b>Conditioning coach concept</b></div><h3>Capacity & engine</h3><p>Intervals · Endurance · Recovery</p></article><article class="coach-card reveal"><div class="coach-portrait coach-three"><span>PC</span><b>Personal coach concept</b></div><h3>Individual coaching</h3><p>Assessment · Programming · Feedback</p></article></div>
+      </section>
+
+      <section class="membership" id="membership">
+        <header class="membership-heading reveal"><p class="label">05 / Membership</p><h2>Pick a rhythm.<br />Build from there.</h2></header>
+        <div class="plan-grid"><article class="plan reveal"><span>Start</span><h3>Foundation</h3><p>For learning the room, movement patterns and a sustainable weekly rhythm.</p><ul><li>Coach-guided onboarding</li><li>Selected weekly sessions</li><li>Movement orientation</li></ul><strong>Demo plan</strong><a href="#trial">Choose foundation ↗</a></article><article class="plan featured reveal"><div class="plan-tag">Recommended layout</div><span>Build</span><h3>Unlimited</h3><p>For a flexible schedule across strength, conditioning and cross training.</p><ul><li>Full class timetable</li><li>Program pathways</li><li>Progress conversations</li></ul><strong>Demo plan</strong><a href="#trial">Choose unlimited ↗</a></article><article class="plan reveal"><span>Focus</span><h3>Coached</h3><p>For individual attention, tailored programming and direct feedback.</p><ul><li>One-to-one sessions</li><li>Individual programming</li><li>Technique review</li></ul><strong>Demo plan</strong><a href="#trial">Choose coached ↗</a></article></div>
+      </section>
+
+      <section class="community"><div class="community-copy reveal"><p class="label">06 / Community</p><h2>Shared effort.<br /><span>Your own standard.</span></h2><p>A gym can feel serious without feeling exclusive. This event concept creates space for workshops, open training and team sessions without inventing attendance or results.</p><a class="button button-yellow" href="#trial">See the event format</a></div><div class="event-card reveal"><div class="event-date"><strong>OPEN</strong><span>SESSION</span></div><p>Technique workshop concept</p><h3>Squat, hinge<br />and carry.</h3><div><span>Demo Saturday</span><span>Booking required</span></div></div></section>
+
+      <section class="training-gallery"><figure class="reveal"><img src="./assets/gym-floor.jpg" alt="Modern gym training floor" /><figcaption>The floor / 01</figcaption></figure><figure class="reveal"><img src="./assets/athlete-prep.jpg" alt="Athlete preparing for a workout" /><figcaption>The work / 02</figcaption></figure><figure class="reveal"><img src="./assets/functional.jpg" alt="Functional fitness training" /><figcaption>The focus / 03</figcaption></figure></section>
+
+      <section class="trial" id="trial"><div class="trial-copy reveal"><p class="label">One session. No hard sell.</p><h2>Come train.<br /><span>See how it feels.</span></h2><p>This CTA is demonstrative only. A real deployment would connect to verified gym booking details and consent fields.</p></div><form class="trial-form reveal" data-demo-form><label>Name<input required name="name" autocomplete="name" placeholder="Your name" /></label><label>Email<input required type="email" name="email" autocomplete="email" placeholder="you@example.com" /></label><label>Training interest<select name="interest"><option>Strength</option><option>Conditioning</option><option>Cross Training</option><option>Personal Coaching</option></select></label><button class="button button-yellow" type="submit">Request demo session ↗</button><p class="form-status" aria-live="polite"></p></form></section>
+
+      <section class="location"><p class="label">Concept location</p><h2>Built for an<br />industrial training space.</h2><div class="location-grid"><div class="map"><span>FORGE</span><i></i></div><div><dl><dt>Address</dt><dd>Demo training district — no real location</dd><dt>Contact</dt><dd>Verified phone and email added for a live business</dd><dt>Access</dt><dd>Parking and transit details configured at launch</dd></dl></div></div></section>
+    </main>
+
+    <footer><a class="logo" href="#home">F<span>O</span>RGE<small>Training club</small></a><p>Premium fitness website concept by Rashed Digital Studio.</p><nav><a href="#programs">Programs</a><a href="#schedule">Schedule</a><a href="#trial">Free trial</a></nav><a href="#home">Back to top ↑</a></footer>
+  </body>
+</html>
