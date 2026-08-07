@@ -40,6 +40,8 @@ const aboutFacts = [
   },
 ] as const;
 
+const workingPrinciples = ["Presentation", "Usability", "Action"] as const;
+
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
   const reducedMotion = useReducedMotion();
@@ -52,103 +54,108 @@ export default function About() {
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: ".about-v4-heading",
-            start: "top 89%",
-            end: "top 40%",
+            trigger: ".about-v6-head",
+            start: "top 88%",
+            end: "top 37%",
             scrub: 0.8,
           },
         })
         .fromTo(
-          ".about-v4-kicker",
-          { x: -20, opacity: 0 },
+          ".about-v6-kicker",
+          { x: -22, opacity: 0 },
           { x: 0, opacity: 1, duration: 0.2, ease: "none" },
           0,
         )
         .fromTo(
-          ".about-v4-title-line",
-          { yPercent: 112, rotate: 2 },
+          ".about-v6-title-line",
+          { yPercent: 115, rotate: 2.5 },
           {
             yPercent: 0,
             rotate: 0,
-            duration: 0.58,
-            stagger: 0.08,
+            duration: 0.62,
+            stagger: 0.075,
             ease: "power3.out",
           },
           0.08,
         )
         .fromTo(
-          ".about-v4-person",
-          { y: 25, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.28, ease: "none" },
-          0.32,
+          ".about-v6-founder-mark",
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.3, ease: "none" },
+          0.34,
         );
 
       gsap.fromTo(
-        ".about-v4-intro",
-        { y: 58, opacity: 0.18 },
+        ".about-v6-visual",
+        {
+          y: 70,
+          scale: 0.93,
+          clipPath: "inset(8% 6% 8% 6%)",
+          opacity: 0.2,
+        },
         {
           y: 0,
+          scale: 1,
+          clipPath: "inset(0% 0% 0% 0%)",
           opacity: 1,
           ease: "none",
           scrollTrigger: {
-            trigger: ".about-v4-main",
-            start: "top 88%",
-            end: "top 52%",
-            scrub: 0.75,
+            trigger: ".about-v6-story",
+            start: "top 91%",
+            end: "top 43%",
+            scrub: 0.88,
           },
         },
       );
 
       gsap.fromTo(
-        ".about-v4-visual",
-        { y: 80, scale: 0.88, rotate: -2.5, opacity: 0.15 },
+        ".about-v6-narrative > *",
+        { y: 42, opacity: 0.12 },
         {
           y: 0,
-          scale: 1,
-          rotate: 0,
           opacity: 1,
+          stagger: 0.07,
           ease: "none",
           scrollTrigger: {
-            trigger: ".about-v4-main",
-            start: "top 91%",
-            end: "top 43%",
-            scrub: 0.9,
+            trigger: ".about-v6-narrative",
+            start: "top 87%",
+            end: "top 48%",
+            scrub: 0.72,
           },
         },
       );
 
-      const facts = gsap.utils.toArray<HTMLElement>(".about-v4-fact");
-      facts.forEach((fact, index) => {
+      const rows = gsap.utils.toArray<HTMLElement>(".about-v6-ledger-row");
+      rows.forEach((row) => {
         gsap.fromTo(
-          fact,
-          { y: 42, opacity: 0.18 },
+          row,
+          { y: 34, opacity: 0.14 },
           {
             y: 0,
             opacity: 1,
             ease: "none",
             scrollTrigger: {
-              trigger: fact,
-              start: "top 93%",
-              end: "top 67%",
-              scrub: 0.62,
+              trigger: row,
+              start: "top 94%",
+              end: "top 72%",
+              scrub: 0.58,
             },
-            delay: index * 0.025,
           },
         );
       });
 
       gsap.fromTo(
-        ".about-v4-focus",
-        { y: 32, opacity: 0 },
+        ".about-v6-focus",
+        { y: 28, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           ease: "none",
           scrollTrigger: {
-            trigger: ".about-v4-focus",
-            start: "top 92%",
-            end: "top 70%",
-            scrub: 0.55,
+            trigger: ".about-v6-focus",
+            start: "top 93%",
+            end: "top 72%",
+            scrub: 0.52,
           },
         },
       );
@@ -164,46 +171,104 @@ export default function About() {
     const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 2;
     const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 2;
 
-    event.currentTarget.style.setProperty("--about-pointer-x", x.toFixed(3));
-    event.currentTarget.style.setProperty("--about-pointer-y", y.toFixed(3));
+    event.currentTarget.style.setProperty("--about-v6-pointer-x", x.toFixed(3));
+    event.currentTarget.style.setProperty("--about-v6-pointer-y", y.toFixed(3));
   };
 
   const resetPointerDepth = (event: ReactPointerEvent<HTMLDivElement>) => {
-    event.currentTarget.style.setProperty("--about-pointer-x", "0");
-    event.currentTarget.style.setProperty("--about-pointer-y", "0");
+    event.currentTarget.style.setProperty("--about-v6-pointer-x", "0");
+    event.currentTarget.style.setProperty("--about-v6-pointer-y", "0");
   };
 
   return (
-    <section className="about-section-v4" id="about" ref={sectionRef}>
-      <div className="about-v4-heading">
-        <span className="about-v4-kicker">Behind the work</span>
+    <section
+      className="about-section-v4 about-section-v6"
+      id="about"
+      ref={sectionRef}
+    >
+      <header className="about-v6-head">
+        <div className="about-v6-head-meta">
+          <span className="about-v6-kicker">About / Founder</span>
+          <span>Independent creative practice · 2026</span>
+        </div>
 
-        <div className="about-v4-heading-grid">
-          <h2 aria-label="Design with purpose behind it">
-            <span className="about-v4-title-mask">
-              <span className="about-v4-title-line">Design with</span>
+        <div className="about-v6-head-grid">
+          <h2 aria-label="One founder. Design, code and purpose.">
+            <span className="about-v6-title-mask">
+              <span className="about-v6-title-line">One founder.</span>
             </span>
-            <span className="about-v4-title-mask">
-              <span className="about-v4-title-line about-v4-title-accent">
-                purpose behind it.
+            <span className="about-v6-title-mask">
+              <span className="about-v6-title-line about-v6-title-outline">
+                Design, code
+              </span>
+            </span>
+            <span className="about-v6-title-mask">
+              <span className="about-v6-title-line about-v6-title-accent">
+                and purpose.
               </span>
             </span>
           </h2>
 
-          <div className="about-v4-person">
-            <span>{aboutData.name}</span>
+          <div className="about-v6-founder-mark">
+            <span>Founder / 001</span>
+            <strong>{aboutData.name}</strong>
             <small>{aboutData.role}</small>
             <small>{aboutData.studio}</small>
           </div>
         </div>
-      </div>
+      </header>
 
-      <div className="about-v4-main">
-        <div className="about-v4-intro">
-          <p className="about-v4-lead">{aboutData.introduction}</p>
-          <p>{aboutData.secondary}</p>
+      <div className="about-v6-story">
+        <div
+          className="about-v6-visual"
+          onPointerMove={updatePointerDepth}
+          onPointerLeave={resetPointerDepth}
+          aria-label="Graphic founder identity for Md Rashed"
+          role="img"
+        >
+          <div className="about-v6-visual-meta" aria-hidden="true">
+            <span>RDS / IDENTITY FILE</span>
+            <span>22.57° N / 88.36° E</span>
+          </div>
 
-          <div className="about-v4-actions">
+          <div className="about-v6-identity-plate" aria-hidden="true">
+            <span className="about-v6-registration about-v6-registration-a" />
+            <span className="about-v6-registration about-v6-registration-b" />
+            <span className="about-v6-registration about-v6-registration-c" />
+            <span className="about-v6-registration about-v6-registration-d" />
+            <span className="about-v6-frame about-v6-frame-outer" />
+            <span className="about-v6-frame about-v6-frame-inner" />
+            <span className="about-v6-scan-line" />
+            <strong className="about-v6-monogram">MR</strong>
+            <span className="about-v6-discipline">DESIGN / FRONT-END</span>
+            <span className="about-v6-name-rail">RASHED DIGITAL STUDIO</span>
+          </div>
+
+          <div className="about-v6-visual-status" aria-hidden="true">
+            <span><i /> Founder-led</span>
+            <strong>Kolkata / Worldwide</strong>
+            <small>Web design · Front-end · Interactive</small>
+          </div>
+        </div>
+
+        <div className="about-v6-narrative">
+          <span className="about-v6-story-label">The practice</span>
+          <p className="about-v6-lead">{aboutData.introduction}</p>
+          <p className="about-v6-secondary">{aboutData.secondary}</p>
+
+          <div className="about-v6-principle">
+            <span>Every project balances</span>
+            <div>
+              {workingPrinciples.map((principle, index) => (
+                <span key={principle}>
+                  <small>0{index + 1}</small>
+                  {principle}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="about-v6-actions">
             <a
               href={siteConfig.calendly}
               target="_blank"
@@ -225,66 +290,36 @@ export default function About() {
             </a>
           </div>
         </div>
-
-        <div
-          className="about-v4-visual"
-          onPointerMove={updatePointerDepth}
-          onPointerLeave={resetPointerDepth}
-          aria-label="Abstract founder identity for Md Rashed"
-          role="img"
-        >
-          <div className="about-v4-visual-top" aria-hidden="true">
-            <span>FOUNDER ID / 001</span>
-            <span>KOL / WORLDWIDE</span>
-          </div>
-
-          <div className="about-v4-identity-system" aria-hidden="true">
-            <span className="about-v4-crosshair about-v4-crosshair-x" />
-            <span className="about-v4-crosshair about-v4-crosshair-y" />
-            <span className="about-v4-orbit about-v4-orbit-a" />
-            <span className="about-v4-orbit about-v4-orbit-b" />
-            <span className="about-v4-orbit about-v4-orbit-c" />
-            <span className="about-v4-node about-v4-node-a" />
-            <span className="about-v4-node about-v4-node-b" />
-            <span className="about-v4-node about-v4-node-c" />
-            <span className="about-v4-node about-v4-node-d" />
-
-            <span className="about-v4-core">
-              <strong>MR</strong>
-              <small>DESIGN / BUILD</small>
-            </span>
-
-            <span className="about-v4-system-label about-v4-label-a">
-              WEB / FRONT-END
-            </span>
-            <span className="about-v4-system-label about-v4-label-b">
-              KOLKATA / INDIA
-            </span>
-          </div>
-
-          <div className="about-v4-visual-footer">
-            <span>Founder</span>
-            <strong>Rashed Digital Studio</strong>
-            <small>Kolkata · Working worldwide</small>
-          </div>
-        </div>
       </div>
 
-      <div className="about-v4-facts">
+      <div className="about-v6-ledger">
+        <div className="about-v6-ledger-head">
+          <span>Founder profile / verified details</span>
+          <span>04 records</span>
+        </div>
+
         {aboutFacts.map((fact) => (
-          <article className="about-v4-fact" key={fact.number}>
-            <span>{fact.number} / {fact.label}</span>
+          <article className="about-v6-ledger-row" key={fact.number}>
+            <span>{fact.number}</span>
+            <small>{fact.label}</small>
             <strong>{fact.value}</strong>
             <p>{fact.detail}</p>
           </article>
         ))}
       </div>
 
-      <div className="about-v4-focus">
-        <span>Current focus</span>
+      <div className="about-v6-focus">
         <div>
-          {aboutData.focus.map((item) => (
-            <span key={item}>{item}</span>
+          <span>Current focus</span>
+          <small>What I design and build</small>
+        </div>
+
+        <div className="about-v6-focus-list">
+          {aboutData.focus.map((item, index) => (
+            <span key={item}>
+              <small>{String(index + 1).padStart(2, "0")}</small>
+              {item}
+            </span>
           ))}
         </div>
       </div>
