@@ -656,6 +656,25 @@ html.theme-transitioning .site-footer-v5 {
   box-shadow: 0 0 70px rgba(35, 137, 181, 0.1);
 }
 
+[data-theme="light"] .about-v6-portrait {
+  border-color: rgba(18, 105, 143, 0.3);
+  background: #e9e8e4;
+  box-shadow:
+    0 30px 70px rgba(35, 50, 56, 0.17),
+    0 0 0 8px rgba(20, 130, 174, 0.035),
+    0 0 52px rgba(37, 146, 190, 0.09);
+}
+
+[data-theme="light"] .about-v6-portrait::before {
+  background:
+    linear-gradient(180deg, transparent 68%, rgba(12, 30, 38, 0.5) 100%),
+    linear-gradient(112deg, rgba(44, 173, 214, 0.03), transparent 40%, rgba(75, 83, 220, 0.025));
+}
+
+[data-theme="light"] .about-v6-portrait::after {
+  border-color: rgba(255, 255, 255, 0.48);
+}
+
 [data-theme="light"] .about-v6-founder-mark {
   border-color: rgba(13, 119, 160, 0.27);
 }
@@ -680,11 +699,6 @@ html.theme-transitioning .site-footer-v5 {
 [data-theme="light"] .about-v6-focus-list > span,
 [data-theme="light"] .about-v6-principle > div > span {
   color: #546870;
-}
-
-[data-theme="light"] .about-v6-monogram {
-  color: #173d51;
-  text-shadow: 0 0 35px rgba(36, 139, 183, 0.15);
 }
 
 [data-theme="light"] .about-v6-actions .secondary-cta {
