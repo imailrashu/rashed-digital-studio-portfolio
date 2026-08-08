@@ -667,8 +667,8 @@ html.theme-transitioning .site-footer-v5 {
 
 [data-theme="light"] .about-v6-portrait::before {
   background:
-    linear-gradient(180deg, transparent 55%, rgba(12, 30, 38, 0.56) 100%),
-    linear-gradient(112deg, rgba(44, 173, 214, 0.045), transparent 38%, rgba(75, 83, 220, 0.035));
+    linear-gradient(180deg, transparent 68%, rgba(12, 30, 38, 0.5) 100%),
+    linear-gradient(112deg, rgba(44, 173, 214, 0.03), transparent 40%, rgba(75, 83, 220, 0.025));
 }
 
 [data-theme="light"] .about-v6-portrait::after {
@@ -699,11 +699,6 @@ html.theme-transitioning .site-footer-v5 {
 [data-theme="light"] .about-v6-focus-list > span,
 [data-theme="light"] .about-v6-principle > div > span {
   color: #546870;
-}
-
-[data-theme="light"] .about-v6-monogram {
-  color: #173d51;
-  text-shadow: 0 0 35px rgba(36, 139, 183, 0.15);
 }
 
 [data-theme="light"] .about-v6-actions .secondary-cta {

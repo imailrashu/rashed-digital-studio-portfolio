@@ -91,7 +91,7 @@ export default function About() {
           y: 70,
           scale: 0.93,
           clipPath: "inset(8% 6% 8% 6%)",
-          opacity: 0.2,
+          opacity: 0.72,
         },
         {
           y: 0,
@@ -242,8 +242,8 @@ export default function About() {
               <img
                 src="/images/md-rashed-profile.webp"
                 alt="Portrait of Md Rashed, founder of Rashed Digital Studio"
-                width="1024"
-                height="1024"
+                width="1254"
+                height="1254"
                 loading="lazy"
                 decoding="async"
                 draggable="false"
@@ -254,7 +254,6 @@ export default function About() {
               </figcaption>
             </figure>
 
-            <strong className="about-v6-monogram" aria-hidden="true">MR</strong>
             <span className="about-v6-discipline" aria-hidden="true">DESIGN / FRONT-END</span>
             <span className="about-v6-name-rail" aria-hidden="true">RASHED DIGITAL STUDIO</span>
           </div>
