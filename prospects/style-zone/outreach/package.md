@@ -16,10 +16,13 @@ Commercial pricing is contained only in this outreach/proposal record. It is int
 
 ## Demo
 
-- **Vercel Preview URL:** https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app
-- **Preview verified:** Yes — protected Vercel Preview, authenticated HTTP 200 and critical-resource hashes verified
+- **Recipient demo URL (temporary share link):** https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app?_vercel_share=tgaNVYBl8A4wFE7USj4q2CWW9vQ9sMwr
+- **Recipient access verified:** Yes — unauthenticated HTTP 200 with the correct Style Zone page and no Vercel login requirement; desktop 1440×900 and mobile 390×844 checks passed
+- **Internal protected Vercel Preview (do not send):** https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app
+- **Internal Preview verification:** Protected Vercel Preview, authenticated HTTP 200 and critical-resource hashes verified
 - **What to review:** Editorial presentation, mobile contact journey, Dhakuria location treatment, and the information-confirmation checklist.
 - **Virtual assistant demonstration:** A lightweight local-knowledge receptionist answers only from the confirmed location/phone data and directs visitors to Call or Location. It does not use a paid AI API or claim bookings.
+- **Link handling:** The recipient link is temporary. Re-check unauthenticated access immediately before any approved outreach.
 
 ## Founding Client Offer
 
@@ -180,9 +183,9 @@ The proposed virtual salon assistant can answer from Style Zone's approved busin
 
 ## WhatsApp Draft
 
-Hello Style Zone team, I’m Md Rashed from Rashed Digital Studio. I created a private website concept showing how Style Zone’s Dhakuria location and contact journey could look on mobile. It is a proposal—not the official website—and uses only limited publicly verified details. Website packages start from ₹11,999. Would you be open to viewing the demo and having a short, no-pressure discussion? Preview: https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app
+Hello Style Zone team, I’m Md Rashed from Rashed Digital Studio. I created a private mobile-friendly website concept for Style Zone’s Dhakuria location and contact journey. It is a proposal—not the official website—and uses only limited publicly verified details. Website packages start from ₹11,999. Would you be open to viewing it and having a short, no-pressure discussion? Demo: https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app?_vercel_share=tgaNVYBl8A4wFE7USj4q2CWW9vQ9sMwr
 
-**Channel note:** WhatsApp availability for the public phone number is not verified. The current Preview is protected by Vercel login. Do not send this draft until the user confirms the channel, recipient, final message, and a recipient-accessible demo link.
+**Channel note:** WhatsApp availability for the public phone number is not verified. Do not send this draft until the user confirms the channel, recipient, and final message. The temporary demo link must be re-checked immediately before sending.
 
 ## Email Draft
 
@@ -191,9 +194,9 @@ Hello Style Zone team, I’m Md Rashed from Rashed Digital Studio. I created a p
 
 Hello Style Zone team,
 
-I’m Md Rashed, founder of Rashed Digital Studio. I created a private website concept showing how Style Zone’s Dhakuria location and contact journey could be presented in a clearer mobile experience. It is a proposal—not the official website—and avoids unverified services, hours, reviews, or results.
+I’m Md Rashed, founder of Rashed Digital Studio. I created a private mobile-friendly website concept for Style Zone’s Dhakuria location and contact journey. It is a proposal—not the official website—and avoids unverified services, hours, reviews, or results.
 
-Preview: https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app
+Demo: https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app?_vercel_share=tgaNVYBl8A4wFE7USj4q2CWW9vQ9sMwr
 
 Website packages start from ₹11,999. If the direction is useful, would you be open to a short call so I can understand your actual services, booking preferences, and website requirements? If it is not relevant, no response is necessary.
 
@@ -213,7 +216,11 @@ Rashed Digital Studio
 
 ## Follow-Up Draft
 
-Hello, this is Md Rashed from Rashed Digital Studio following up once about the private Style Zone website concept. Website packages start from ₹11,999, and the scope can be tailored after a short discussion. If you would like to review the demo or discuss the recommended option, I’m happy to walk you through it. If it is not relevant, no action is needed and I will not continue following up.
+Hello, this is Md Rashed from Rashed Digital Studio following up once about the private Style Zone website concept. Website packages start from ₹11,999, and the scope can be tailored after a short discussion.
+
+Demo: https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app?_vercel_share=tgaNVYBl8A4wFE7USj4q2CWW9vQ9sMwr
+
+If you would like to review it or discuss the recommended option, I’m happy to walk you through it. If it is not relevant, no action is needed and I will not continue following up.
 
 ## Clear Next Step
 
@@ -224,12 +231,13 @@ The preferred next step is a short call or meeting to confirm Style Zone’s ser
 - [ ] Confirm this is the correct Style Zone at 28/1C Gariahat Road, Dhakuria
 - [ ] Confirm the current business phone and whether it supports WhatsApp
 - [ ] Confirm the appropriate email recipient if email outreach is chosen
-- [x] Verified Vercel Preview URL inserted into all drafts
-- [ ] Provide a recipient-accessible Preview before sending; the current Vercel Preview requires login
+- [x] Recipient-accessible temporary demo URL inserted into the WhatsApp, email, and follow-up drafts
+- [x] Unauthenticated recipient access verified with HTTP 200 and no Vercel login requirement
+- [x] Ordinary protected Vercel Preview retained only as an internal reference
 - [ ] Confirm the selected package, final scope, payment milestones, delivery timing, and third-party costs in writing
 - [ ] Confirm any case-study permission separately; do not assume it is included
 - [ ] Confirm no rankings, leads, bookings, clients, or revenue are promised
-- [ ] Re-check the preview immediately before any outreach
+- [ ] Re-check the temporary recipient link immediately before any outreach
 - [ ] Obtain the user’s explicit approval before sending
 
 **Send status:** NOT SENT
