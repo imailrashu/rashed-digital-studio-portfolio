@@ -126,7 +126,6 @@ export default function Process() {
         });
       });
 
-      requestAnimationFrame(() => ScrollTrigger.refresh());
     }, section);
 
     return () => {

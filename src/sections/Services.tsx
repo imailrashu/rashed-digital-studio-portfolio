@@ -163,7 +163,6 @@ export default function Services() {
         },
       );
 
-      requestAnimationFrame(() => ScrollTrigger.refresh());
     }, section);
 
     return () => context.revert();

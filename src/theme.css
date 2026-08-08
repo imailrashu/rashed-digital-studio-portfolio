@@ -540,6 +540,10 @@ html.theme-transitioning .site-footer-v5 {
   color: #61737b;
 }
 
+[data-theme="light"] .service-browser-top small {
+  color: #61737b;
+}
+
 /* Selected work */
 
 [data-theme="light"] .work-project {

@@ -7372,8 +7372,8 @@ a:focus-visible {
 
 .service-browser-top small {
   overflow: hidden;
-  color: #3f4e58;
-  font-size: 0.43rem;
+  color: #7a8b94;
+  font-size: 0.5rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

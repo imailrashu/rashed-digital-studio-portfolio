@@ -221,7 +221,6 @@ export default function SelectedWork() {
         });
       });
 
-      requestAnimationFrame(() => ScrollTrigger.refresh());
     }, section);
 
     return () => {

@@ -231,8 +231,6 @@ export default function Hero() {
         });
       });
 
-      requestAnimationFrame(() => ScrollTrigger.refresh());
-
     }, section);
 
     return () => {

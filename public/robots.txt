@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://rashed-digital-studio-portfolio.vercel.app/sitemap.xml
