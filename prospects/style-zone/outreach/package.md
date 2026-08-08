@@ -14,14 +14,14 @@ No email, WhatsApp message, call, form submission, or other outreach has been se
 
 ## Demo
 
-- **Vercel Preview URL:** Pending deployment
-- **Preview verified:** No
+- **Vercel Preview URL:** https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app
+- **Preview verified:** Yes — protected Vercel Preview, authenticated HTTP 200 and critical-resource hashes verified
 - **What to review:** Editorial presentation, mobile contact journey, Dhakuria location treatment, and the information-confirmation checklist.
 - **Virtual assistant demonstration:** A lightweight local-knowledge receptionist answers only from the confirmed location/phone data and directs visitors to Call or Location. It does not use a paid AI API or claim bookings.
 
 ## WhatsApp Draft
 
-Hello Style Zone team, I’m Md Rashed from Rashed Digital Studio. I found your public Dhakuria listing at 28/1C Gariahat Road, but I couldn’t identify an official website connected to the business. I created a private website concept showing how your location and contact route could be presented more clearly on mobile. The concept does not use reviews or make claims about your services. If you’re open to seeing it, here is the preview: [PREVIEW URL]. This is only a proposal and has not been published as your official website.
+Hello Style Zone team, I’m Md Rashed from Rashed Digital Studio. I found your public Dhakuria listing at 28/1C Gariahat Road, but I couldn’t identify an official website connected to the business. I created a private website concept showing how your location and contact route could be presented more clearly on mobile. The concept does not use reviews or make claims about your services. If you’re open to seeing it, here is the preview: https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app. This is only a proposal and has not been published as your official website.
 
 **Channel note:** WhatsApp availability for the public phone number is not verified. Do not send this draft until the user confirms the appropriate channel.
 
@@ -36,7 +36,7 @@ I’m Md Rashed, founder of Rashed Digital Studio. While reviewing Style Zone’
 
 I created a private, no-obligation website concept to demonstrate how the location and contact journey could be presented in a clearer, more polished mobile experience. I also included a simple virtual website assistant that answers confirmed questions and directs visitors to the available call or location actions. It does not use unverified services, hours, reviews, or business claims.
 
-Preview: [PREVIEW URL]
+Preview: https://rashed-digital-studio-portfolio-git-demo-style-zone-md-rashed.vercel.app
 
 If the direction is useful, I’d be happy to explain what would need to be confirmed before a real website could be developed. If it is not relevant, no response is necessary.
 
@@ -62,7 +62,7 @@ Hello, this is Md Rashed from Rashed Digital Studio following up once about the 
 - [ ] Confirm this is the correct Style Zone at 28/1C Gariahat Road, Dhakuria
 - [ ] Confirm the current business phone and whether it supports WhatsApp
 - [ ] Confirm the appropriate email recipient if email outreach is chosen
-- [ ] Replace `[PREVIEW URL]` with the verified Vercel Preview URL
+- [x] Verified Vercel Preview URL inserted into all drafts
 - [ ] Re-check the preview immediately before any outreach
 - [ ] Obtain the user’s explicit approval before sending
 
