@@ -883,6 +883,23 @@ html.theme-transitioning .site-footer-v5 {
   color: #243842;
 }
 
+[data-theme="light"] .footer-v5-avatar {
+  border-color: rgba(13, 139, 184, 0.38);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.68),
+    0 8px 20px rgba(31, 74, 91, 0.12);
+}
+
+[data-theme="light"] .footer-v5-brand:hover .footer-v5-avatar,
+[data-theme="light"] .footer-v5-brand:focus-visible .footer-v5-avatar {
+  border-color: rgba(0, 151, 207, 0.76);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 0 0 1px rgba(0, 151, 207, 0.11),
+    0 10px 24px rgba(31, 113, 143, 0.14);
+}
+
 [data-theme="light"] :where(.footer-v5-brand-name small, .footer-v5-label, .footer-v5-column p, .footer-v5-bottom, .footer-v5-signal small) {
   color: #61737b;
 }

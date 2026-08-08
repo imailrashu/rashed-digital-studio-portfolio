@@ -61,7 +61,16 @@ export default function Footer() {
 
       <div className="footer-v5-top footer-v5-reveal">
         <a href="#home" className="footer-v5-brand">
-          <span className="footer-v5-monogram">R</span>
+          <img
+            className="footer-v5-avatar"
+            src="/images/md-rashed-profile.webp"
+            alt="Portrait of Md Rashed"
+            width="48"
+            height="48"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
           <span className="footer-v5-brand-name">
             <strong>Rashed</strong>
             <small>Digital Studio</small>
